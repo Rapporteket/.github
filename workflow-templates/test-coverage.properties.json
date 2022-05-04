@@ -1,0 +1,12 @@
+{
+    "name": "Rapporteket Organization Workflow",
+    "description": "Rapporteket Organization CI test R coverage",
+    "categories": [
+        "R"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
