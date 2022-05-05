@@ -1,0 +1,14 @@
+{
+    "name": "Build and upload docker image",
+    "description": "Build a docker image and upload it to dockerhub. Runs on a weekly schedule and on code changes.",
+    "iconName": "logo",
+    "categories": [
+        "R"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$",
+        "^DESCRIPTION"
+    ]
+}
