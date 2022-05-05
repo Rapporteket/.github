@@ -1,0 +1,14 @@
+{
+    "name": "Check R package",
+    "description": "Run check on an R package and report the results.",
+    "iconName": "logo",
+    "categories": [
+        "R"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$",
+        "^DESCRIPTION"
+    ]
+}
