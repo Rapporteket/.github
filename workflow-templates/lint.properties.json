@@ -1,0 +1,14 @@
+{
+    "name": "Static code analysis for R",
+    "description": "Checks adherence to style requirements, syntax and semantics of code in an R package.",
+    "iconName": "logo",
+    "categories": [
+        "R"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$",
+        "^DESCRIPTION"
+    ]
+}

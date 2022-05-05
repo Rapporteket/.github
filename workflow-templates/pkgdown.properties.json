@@ -1,0 +1,14 @@
+{
+    "name": "Make R package documentation",
+    "description": "Build and deploy a documentation site for an R package. Please make sure to enable gh-pages in the repository settings first.",
+    "iconName": "logo",
+    "categories": [
+        "R"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$",
+        "^DESCRIPTION"
+    ]
+}
