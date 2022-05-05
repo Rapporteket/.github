@@ -1,6 +1,7 @@
 {
     "name": "Rapporteket Organization Workflow",
     "description": "Rapporteket Organization CI test R coverage",
+    "iconName": "logo",
     "categories": [
         "R"
     ],
