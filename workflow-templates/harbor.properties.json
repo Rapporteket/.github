@@ -1,0 +1,14 @@
+{
+    "name": "Build and upload docker image to Harbor",
+    "description": "Build a docker image and upload it to Harbor. Only upload releases to Harbor.",
+    "iconName": "logo",
+    "categories": [
+        "Dockerfile"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$",
+        "^DESCRIPTION"
+    ]
+}
