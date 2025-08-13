@@ -27,7 +27,6 @@ jobs:
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-      RSPM: ${{ matrix.config.rspm }}
       GITHUB_PAT: ${{ secrets.GH_TOKEN }}
 
     steps:
@@ -41,20 +40,19 @@ jobs:
 
       - uses: r-lib/actions/setup-tinytex@v2
 
-      - name: Db unit tests in ubuntu/linux only
-        if: runner.os != 'Windows'
+      - name: Db unit tests environment variables in linux only
         run: |
           if [[ ${{ runner.os }} == Linux ]]; then
-            echo "GITHUB_ACTIONS_RUN_DB_UNIT_TESTS=true" >> $GITHUB_ENV
+            echo "RUN_DB_UNIT_TESTS=true" >> $GITHUB_ENV
             echo "MYSQL_HOST=localhost" >> $GITHUB_ENV
             echo "MYSQL_DB_DATA=testDb" >> $GITHUB_ENV
             echo "MYSQL_USER=root" >> $GITHUB_ENV
             echo "MYSQL_PASSWORD=root" >> $GITHUB_ENV
           else
-            echo "GITHUB_ACTIONS_RUN_DB_UNIT_TESTS=false" >> $GITHUB_ENV
+            echo "RUN_DB_UNIT_TESTS=false" >> $GITHUB_ENV
           fi
 
-      - name: Set up MySQL, ubuntu only
+      - name: Set up MySQL, linux only
         if: runner.os == 'Linux'
         run: |
           sudo /etc/init.d/mysql start
