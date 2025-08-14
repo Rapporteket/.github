@@ -1,6 +1,6 @@
 {
     "name": "Unit test code coverage",
-    "description": "Measure and report unit test code coverage in an R package.",
+    "description": "Measure and report unit test code coverage in an R package. Make sure to add CODECOV_TOKEN as a secret in your repository settings.",
     "iconName": "logo",
     "categories": [
         "R"

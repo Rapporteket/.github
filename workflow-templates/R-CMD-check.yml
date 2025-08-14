@@ -45,7 +45,6 @@ jobs:
           if [[ ${{ runner.os }} == Linux ]]; then
             echo "RUN_DB_UNIT_TESTS=true" >> $GITHUB_ENV
             echo "MYSQL_HOST=localhost" >> $GITHUB_ENV
-            echo "MYSQL_DB_DATA=testDb" >> $GITHUB_ENV
             echo "MYSQL_USER=root" >> $GITHUB_ENV
             echo "MYSQL_PASSWORD=root" >> $GITHUB_ENV
           else
@@ -55,8 +54,9 @@ jobs:
       - name: Set up MySQL, linux only
         if: runner.os == 'Linux'
         run: |
-          sudo /etc/init.d/mysql start
-          mysql -e 'CREATE DATABASE IF NOT EXISTS testdb;' -uroot -proot
+          sudo apt-get update
+          sudo apt-get install -y mysql-server
+          sudo service mysql start
           
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
