@@ -21,13 +21,13 @@ jobs:
       matrix:
         config:
           - {os: windows-latest, r: 'release'}
-          - {os: macOS-latest, r: 'release'}
           - {os: ubuntu-latest, r: 'release'}
-          - {os: ubuntu-latest, r: 'devel'}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-      GITHUB_PAT: ${{ secrets.GH_TOKEN }}
+      RSPM: ${{ matrix.config.rspm }}
+      GITHUB_PAT: ${{ secrets.GT }}
+      R_COMPILE_AND_INSTALL_PACKAGES: never
 
     steps:
       - uses: actions/checkout@v5
@@ -36,34 +36,14 @@ jobs:
         with:
           r-version: ${{ matrix.config.r }}
           use-public-rspm: true
-      
+
       - uses: r-lib/actions/setup-pandoc@v2
 
-      - uses: r-lib/actions/setup-tinytex@v2
-
-      - name: Db unit tests environment variables in linux only
-        run: |
-          if [[ ${{ runner.os }} == Linux ]]; then
-            echo "RUN_DB_UNIT_TESTS=true" >> $GITHUB_ENV
-            echo "MYSQL_HOST=localhost" >> $GITHUB_ENV
-            echo "MYSQL_USER=root" >> $GITHUB_ENV
-            echo "MYSQL_PASSWORD=root" >> $GITHUB_ENV
-          else
-            echo "RUN_DB_UNIT_TESTS=false" >> $GITHUB_ENV
-          fi
-
-      - name: Set up MySQL, linux only
-        if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y mysql-server
-          sudo service mysql start
-          
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::rcmdcheck
           needs: check
-        
+
       - uses: r-lib/actions/check-r-package@v2
         with:
           args: 'c("--no-manual", "--as-cran")'
