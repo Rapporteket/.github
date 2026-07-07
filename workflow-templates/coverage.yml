@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_COMPILE_AND_INSTALL_PACKAGES: never
       RUN_DB_UNIT_TESTS: true
       MYSQL_HOST: "localhost"
       MYSQL_USER: "root"
