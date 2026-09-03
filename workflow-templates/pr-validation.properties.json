@@ -1,0 +1,14 @@
+{
+    "name": "Rapporteket PR validation",
+    "description": "Validates that pull requests comply with security requirements from the Rapporteket risk assessment. Requires security review, testing confirmation, and audit logging assessment for features involving sensitive data.",
+    "iconName": "logo",
+    "categories": [
+        "R"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$",
+        "^DESCRIPTION"
+    ]
+}
