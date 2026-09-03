@@ -4,10 +4,6 @@
 
 <!-- Kort beskrivelse av endringen -->
 
-## Hvorfor er endringen nødvendig?
-
-<!-- Hva løser denne endringen? -->
-
 ---
 
 # Sikkerhetsvurdering
