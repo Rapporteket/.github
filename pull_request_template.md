@@ -22,8 +22,7 @@ Beskriv behovet eller problemet som løses.
 Hvis ja, beskriv:
 
 <!--
-ROS 1b:
-Innloggede brukere får tilgang til data de ikke skal ha tilgang til.
+Innloggede brukere skal ikke få tilgang til data de ikke skal ha tilgang til.
 -->
 
 ---
@@ -43,80 +42,8 @@ Hvis ja:
 Beskriv vurderingen:
 
 <!--
-ROS 1a, 1d, 2d
--->
-
----
-
-## Påvirker denne endringen autentisering eller autorisering?
-
-- [ ] Nei
-- [ ] Ja
-
-Hvis ja:
-
-- [ ] Sikkerhetsansvarlig er involvert
-- [ ] Test av uautorisert tilgang er gjennomført
-- [ ] Eksisterende roller og rettigheter er verifisert
-
-Beskriv:
-
----
-
-## Påvirker denne endringen dataflyt eller integrasjoner?
-
-- [ ] Nei
-- [ ] Ja
-
-Hvis ja:
-
-- [ ] Kryptering er verifisert
-- [ ] Ingen nye åpne endepunkter eksponeres
-- [ ] Integrasjonen er testet i QA
-
-Beskriv:
-
-<!--
-ROS 2a, 2f
--->
-
----
-
-## Kan endringen påvirke konfigurasjon eller infrastruktur?
-
-- [ ] Nei
-- [ ] Ja
-
-Hvis ja:
-
-- [ ] Endringen er dokumentert
-- [ ] Endringen er testet i QA
-- [ ] Rollback-plan finnes
-
-Beskriv:
-
-<!--
-ROS 1f, 2e
--->
-
----
-
-## Påvirker denne endringen Github-repositoriet eller CI/CD?
-
-- [ ] Nei
-- [ ] Ja
-
-Hvis ja:
-
-- [ ] Ingen nye hemmeligheter (secrets) er lagt inn i kode
-- [ ] Nødvendige GitHub-rettigheter er gjennomgått
-- [ ] Branch protection påvirkes ikke
-- [ ] Dependabot/SAST-resultater er gjennomgått
-
-Beskriv:
-
-<!--
-ROS 1c
+ROS 1a
+Rapporter og resultater som sendes automatisk ut på epost inneholder sensitive data
 -->
 
 ---
