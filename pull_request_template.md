@@ -1,86 +1,52 @@
 # Beskrivelse
 
 ## Hva er endret?
-Beskriv endringen kort.
+
+<!-- Kort beskrivelse av endringen -->
 
 ## Hvorfor er endringen nødvendig?
-Beskriv behovet eller problemet som løses.
 
-## Relaterte saker
-- Closes #
-- Related to #
+<!-- Hva løser denne endringen? -->
 
 ---
 
 # Sikkerhetsvurdering
 
-## Påvirker denne endringen tilgang til data?
+## Påvirker endringen noen av følgende områder?
 
-- [ ] Nei
-- [ ] Ja, og tilgangsstyring er gjennomgått
+- [ ] Tilgangsstyring eller autorisering
+- [ ] Visning av sensitive data
+- [ ] E-post eller utsending av rapporter
+- [ ] Konfigurasjon
+- [ ] Ingen av punktene over
 
-Hvis ja, beskriv:
-
-<!--
-Innloggede brukere skal ikke få tilgang til data de ikke skal ha tilgang til.
--->
-
----
-
-## Påvirker denne endringen håndtering eller visning av sensitive data?
-
-- [ ] Nei
-- [ ] Ja
-
-Hvis ja:
-
-- [ ] Sensitive data eksponeres ikke i logger
-- [ ] Sensitive data eksponeres ikke i feilmeldinger
-- [ ] Sensitive data eksponeres ikke i e-post
-- [ ] Sensitive data eksponeres ikke i klientkode/browser
+Hvis ett eller flere punkter er krysset av:
 
 Beskriv vurderingen:
 
 <!--
-ROS 1a
-Rapporter og resultater som sendes automatisk ut på epost inneholder sensitive data
+Har du vurdert:
+- at brukere ikke får tilgang til data de ikke skal se
+- at sensitive data ikke eksponeres utilsiktet
+- at rapporter som sendes ut ikke inneholder sensitive data
 -->
 
 ---
 
 # Testing
 
-## Gjennomført testing
-
-- [ ] Enhetstester
-- [ ] Integrasjonstester
-- [ ] QA-test
-- [ ] Manuell sikkerhetstest
-- [ ] Ingen tester nødvendig
+- [ ] Testet lokalt
+- [ ] Testet i QA
+- [ ] Ingen testing nødvendig
 
 Beskriv utført testing:
 
 ---
 
-# Sjekkliste før merge
+# Sjekkliste
 
-- [ ] Koden er gjennomgått av minst én annen utvikler
-- [ ] Ingen sensitive data er lagt inn i kode, tester eller dokumentasjon
-- [ ] Logging er gjennomgått
-- [ ] Feilhåndtering er vurdert
-- [ ] Dokumentasjon er oppdatert
-- [ ] Risiko er vurdert opp mot ROS for Rapporteket
-
-## Risikonivå
-
-- [ ] Lav
-- [ ] Middels
-- [ ] Høy
-
-Hvis middels eller høy, beskriv kompenserende tiltak:
-
----
-
-# Kommentar til reviewer
-
-Spesielle forhold reviewer bør være oppmerksom på:
+- [ ] Jeg har vurdert sikkerhetskonsekvensene av endringen
+- [ ] Ingen sensitive data er lagt inn i kode, tester eller logger
+- [ ] All nedlasting av sensitive data logges
+- [ ] Nødvendige tester er gjennomført
+- [ ] Endringen er klar for review
