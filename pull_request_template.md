@@ -36,7 +36,6 @@ Har du vurdert:
 # Testing
 
 - [ ] Testet lokalt
-- [ ] Testet i QA
 - [ ] Ingen testing nødvendig
 
 Beskriv utført testing:
