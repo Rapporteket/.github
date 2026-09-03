@@ -16,8 +16,6 @@
 - [ ] Konfigurasjon
 - [ ] Ingen av punktene over
 
-Hvis ett eller flere punkter er krysset av:
-
 Beskriv vurderingen:
 
 <!--
