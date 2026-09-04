@@ -1,7 +1,5 @@
 # Beskrivelse
 
-## Hva er endret?
-
 <!-- Kort beskrivelse av endringen -->
 
 ---
