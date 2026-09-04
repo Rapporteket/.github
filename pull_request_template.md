@@ -10,11 +10,10 @@
 
 - [ ] Tilgangsstyring eller autorisering
 - [ ] Visning av sensitive data
-- [ ] E-post eller utsending av rapporter
-- [ ] Konfigurasjon
+- [ ] Utsending av rapporter
 - [ ] Ingen av punktene over
 
-Beskriv vurderingen:
+Beskriv kort vurderingen:
 
 <!--
 Har du vurdert:
@@ -30,7 +29,7 @@ Har du vurdert:
 - [ ] Testet lokalt
 - [ ] Ingen testing nødvendig
 
-Beskriv utført testing:
+Beskriv kort utført testing:
 
 ---
 
@@ -40,4 +39,3 @@ Beskriv utført testing:
 - [ ] Ingen sensitive data er lagt inn i kode, tester eller logger
 - [ ] All nedlasting av sensitive data logges
 - [ ] Nødvendige tester er gjennomført
-- [ ] Endringen er klar for review

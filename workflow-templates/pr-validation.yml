@@ -20,7 +20,7 @@ jobs:
           required=(
             "[x] Jeg har vurdert sikkerhetskonsekvensene av endringen"
             "[x] Ingen sensitive data er lagt inn i kode, tester eller logger"
-            "[x] Logging er implementert eller vurdert for alle nye funksjoner som gir tilgang til eller nedlasting av sensitive data"
+            "[x] All nedlasting av sensitive data logges"
             "[x] Nødvendige tester er gjennomført"
           )
 
