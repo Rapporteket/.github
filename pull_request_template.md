@@ -1,6 +1,3 @@
-# Beskrivelse
-
-<!-- Kort beskrivelse av endringen -->
 
 ---
 
