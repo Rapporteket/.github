@@ -10,9 +10,9 @@
 - [ ] Utsending av rapporter
 - [ ] Ingen av punktene over
 
-Beskriv kort vurderingen:
-
 <!--
+Beskriv kort vurderingen
+
 Har du vurdert:
 - at brukere ikke får tilgang til data de ikke skal se
 - at sensitive data ikke eksponeres utilsiktet
@@ -26,7 +26,9 @@ Har du vurdert:
 - [ ] Testet lokalt
 - [ ] Ingen testing nødvendig
 
-Beskriv kort utført testing:
+<!--
+Beskriv kort utført testing
+-->
 
 ---
 
