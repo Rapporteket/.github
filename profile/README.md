@@ -5,3 +5,5 @@ Tjenesten utvikles og vedlikeholdes av [Nasjonalt servicemiljø for medisinske k
 
 Teknologien bak *Rapporteket* er i hovedsak basert på *R*, som er et fritt tilgjengelig programvaremiljø for statistiske og grafiske formål.
 All programkode og annet innhold (utenom registerdata) på *Rapporteket* er strukturert i R-pakker som lages og vedlikeholdes av statistikere i registrene og i Servicemiljøet.
+
+Eldre repositories som ikke lenger er i bruk, arkiveres og flyttes til [rapporteket-archive-organisasjonen](https://github.com/rapporteket-archive).
