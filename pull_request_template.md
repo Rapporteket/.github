@@ -36,5 +36,5 @@ Beskriv kort utført testing
 
 - [ ] Jeg har vurdert sikkerhetskonsekvensene av endringen
 - [ ] Ingen sensitive data er lagt inn i kode, tester eller logger
-- [ ] All nedlasting av sensitive data logges
+- [ ] All nedlasting av sensitive data logges (se [vår nettside om logging](https://rapporteket.github.io/logging) for mer informasjon)
 - [ ] Nødvendige tester er gjennomført
