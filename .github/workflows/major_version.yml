@@ -28,7 +28,7 @@ jobs:
       - name: Update Floating Tag
         run: |
           FLOATING_TAG="${{ steps.get_major.outputs.major }}"
-          TARGET_COMMIT="${{ github.event.release.target_commitish }}"
+          TARGET_COMMIT="$GITHUB_SHA"
           
           echo "Updating floating tag $FLOATING_TAG to point to $TARGET_COMMIT"
           
