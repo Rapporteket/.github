@@ -8,4 +8,4 @@ name: lint
 
 jobs:
   lint:
-    uses: rapporteket/.github/.github/workflows/lint.yml@main
+    uses: rapporteket/.github/.github/workflows/lint.yml@v1
