@@ -7,10 +7,6 @@ on:
   pull_request:
     branches: [ $default-branch ]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
-
 jobs:
   build:
     uses: rapporteket/.github/.github/workflows/harbor.yml@main

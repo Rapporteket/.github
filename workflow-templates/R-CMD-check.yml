@@ -6,10 +6,6 @@ on:
 
 name: R-CMD-check
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
-
 jobs:
   R-CMD-check:
     uses: rapporteket/.github/.github/workflows/R-CMD-check.yml@main
