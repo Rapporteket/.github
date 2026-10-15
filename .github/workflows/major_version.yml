@@ -6,6 +6,7 @@ on:
 
 jobs:
   update-tag:
+    if: ${{ !github.event.release.prerelease }}
     runs-on: ubuntu-latest
     permissions:
       contents: write # Required to push tag updates back to the repo
