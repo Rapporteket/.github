@@ -1,0 +1,43 @@
+name: Update Floating Major Version Tag
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-tag:
+    if: ${{ !github.event.release.prerelease }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to push tag updates back to the repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches all tags and history
+
+      - name: Calculate Major Version
+        id: get_major
+        run: |
+          # Extracts 'v1' from 'v1.0.0' or 'v1.2.3'
+          TAG_NAME="${{ github.event.release.tag_name }}"
+          MAJOR_VERSION=$(echo "$TAG_NAME" | cut -d'.' -f1)
+          echo "major=$MAJOR_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Update Floating Tag
+        run: |
+          FLOATING_TAG="${{ steps.get_major.outputs.major }}"
+          TARGET_COMMIT="$GITHUB_SHA"
+          
+          echo "Updating floating tag $FLOATING_TAG to point to $TARGET_COMMIT"
+          
+          # Configure a dummy git user for the local operation
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@://github.com"
+          
+          # Force create/update the local tag pointing to the release commit
+          git tag -f "$FLOATING_TAG" "$TARGET_COMMIT"
+          
+          # Force push the updated tag back to GitHub
+          git push origin "$FLOATING_TAG" --force

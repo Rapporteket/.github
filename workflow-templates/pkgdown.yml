@@ -12,6 +12,6 @@ permissions: read-all
 
 jobs:
   pkgdown:
-    uses: rapporteket/.github/.github/workflows/pkgdown.yml@main
+    uses: rapporteket/.github/.github/workflows/pkgdown.yml@v1
     permissions:
       contents: write
