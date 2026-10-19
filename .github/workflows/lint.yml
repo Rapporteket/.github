@@ -3,7 +3,7 @@ name: lint
 on:
   workflow_call:
     inputs:
-      error-on:
+      error-on-lint:
         required: false
         default: true
         type: boolean
@@ -37,4 +37,4 @@ jobs:
         run: lintr::lint_package()
         shell: Rscript {0}
         env:
-          LINTR_ERROR_ON_LINT: ${{ inputs.error-on }}
+          LINTR_ERROR_ON_LINT: ${{ inputs.error-on-lint }}
