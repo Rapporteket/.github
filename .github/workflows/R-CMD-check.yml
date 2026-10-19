@@ -7,7 +7,10 @@ on:
         required: false
         default: '"note"'
         type: string
-        description: 'Specifies the error level for R CMD check (e.g., "note", "warning", "error")'
+        description: >-
+          Failure threshold for R CMD check, supplied as an R string literal.
+          Callers must retain the inner double quotes, for example:
+          error-on: '"warning"'. Allowed literals are '"note"', '"warning"', and '"error"'.
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-check
