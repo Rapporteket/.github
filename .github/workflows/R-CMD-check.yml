@@ -2,6 +2,10 @@ name: R-CMD-check
 
 on:
   workflow_call:
+    inputs:
+      error-on:
+        required: false
+        default: '"note"'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-check
@@ -38,5 +42,5 @@ jobs:
 
       - uses: r-lib/actions/check-r-package@v2
         with:
-          error-on: '"note"'
+          error-on: ${{ inputs.error-on }}
           args: c("--no-manual")
