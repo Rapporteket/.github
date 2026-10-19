@@ -6,8 +6,12 @@ on:
       error-on:
         required: false
         default: '"note"'
-        type: string
+        type: choice
         description: 'Specifies the error level for R CMD check (e.g., "note", "warning", "error")'
+        options:
+          - "note"
+          - "warning"
+          - "error"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-check
