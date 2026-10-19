@@ -2,6 +2,14 @@ name: lint
 
 on:
   workflow_call:
+    inputs:
+      error-on-lint:
+        required: false
+        default: true
+        type: boolean
+        description: >-
+          Failure threshold for linting, supplied as a boolean.
+          Set to true to treat linting warnings as errors, false otherwise.
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-lint
@@ -29,4 +37,4 @@ jobs:
         run: lintr::lint_package()
         shell: Rscript {0}
         env:
-          LINTR_ERROR_ON_LINT: true
+          LINTR_ERROR_ON_LINT: ${{ inputs.error-on-lint }}
